@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Find Countries 🌍</title>
+  <link rel="stylesheet" href="./main.css">
+  <script src="./js/bundle.js"></script>
+</head>
+<body>
+
+
+  <div id="app">
+
+    <h1>Countries of the world</h1>
+    <p>Total world population:{{ totalPop }}</p>
+
+      <ul>
+        <option v-for="country in countries">{{country.name}} {{country.population}}</option>
+      </ul>
+
+
+      <form v-on:submit.prevent="saveCountry">
+      <h3>Add fav country</h3>
+      <input type="text" v-model="favNewCountry.name"/>
+      <input type="submit" value="Add Country"/>
+    </form>
+
+
+
+
+  </div>
+
+</body>
+</html>
